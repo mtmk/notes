@@ -1,0 +1,21 @@
+Build
+-----
+I have tested build.sh dotnet cross compile script on ubuntu (Ubuntu 20.04.3 LTS)
+
+Run in a Wine session
+---------------------
+Install Wine from winehq.org:
+
+$ wget -nc https://dl.winehq.org/wine-builds/winehq.key
+$ sudo apt-key add winehq.key
+$ cat /etc/os-release
+$ sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main'
+$ sudo apt update
+$ sudo apt install --install-recommends winehq-stable
+
+Run the console
+$ wineconsole
+
+in wineconsole
+> cd dist
+> xcompile.exe
