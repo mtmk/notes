@@ -230,6 +230,7 @@ You can remove the system gpg:
 ```sh
 sudo apt remove libgpgmepp6
 sudo apt remove gpg
+sudo apt remove gpg-agent
 sudo apt autoremove
 ```
 You can [download and compile the latest GnuPG]:
