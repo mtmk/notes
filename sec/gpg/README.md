@@ -216,11 +216,11 @@ gpg --batch --use-agent --decrypt vault_passphrase.gpg
 vault_password_file=vault_pass.sh
 ```
 
-## Compiling [GnuPG]
+## Compiling GnuPG
 
-If you're on a older version gpg on your system than you're connecting to over ssh
+If you're on an older version of `gpg` on your system than you're connecting to over `ssh`
 (e.g. Ubuntu 20.04.3 LTS to Debian GNU/Linux 11 bullseye), you'd get an error about
-older version of gpg agent:
+older version of `gpg-agent`:
 ```
 gpg: WARNING: server 'gpg-agent' is older than us (2.2.19 < 2.2.27)
 gpg: Note: Outdated servers may lack important security fixes.
