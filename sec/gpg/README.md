@@ -216,6 +216,49 @@ gpg --batch --use-agent --decrypt vault_passphrase.gpg
 vault_password_file=vault_pass.sh
 ```
 
+## Compiling [GnuPG]
+
+If you're on a older version gpg on your system than you're connecting to over ssh
+(e.g. Ubuntu 20.04.3 LTS to Debian GNU/Linux 11 bullseye), you'd get an error about
+older version of gpg agent:
+```
+gpg: WARNING: server 'gpg-agent' is older than us (2.2.19 < 2.2.27)
+gpg: Note: Outdated servers may lack important security fixes.
+gpg: Note: Use the command "gpgconf --kill all" to restart them.
+```
+You can remove the system gpg:
+```sh
+sudo apt remove libgpgmepp6
+sudo apt remove gpg
+sudo apt autoremove
+```
+You can [download and compile the latest GnuPG]:
+(Do update the version to whatever it might be at the time you're reading this)
+```sh
+cd ~/Downloads
+version=gnupg-2.2.34
+wget https://gnupg.org/ftp/gcrypt/gnupg/$version.tar.bz2
+wget https://gnupg.org/ftp/gcrypt/gnupg/$version.tar.bz2.sig
+tar xf $version.tar.bz2
+cd $version
+sudo apt-get update
+sudo apt-get install -y libldap2-dev
+sudo apt-get install -y gtk+-2
+sudo apt-get install -y rng-tools
+sudo apt-get install -y libbz2-dev
+sudo apt-get install -y zlib1g-dev
+sudo apt-get install -y libgmp-dev
+sudo apt-get install -y nettle-dev
+sudo apt-get install -y libgnutls28-dev
+sudo apt-get install -y libsqlite3-dev
+sudo apt-get install -y adns-tools
+sudo apt-get install -y libreadline-dev
+sudo apt-get install -y pinentry-gtk2
+sudo apt-get install -y pcscd scdaemon
+sudo make -f build-aux/speedo.mk native INSTALL_PREFIX=/usr/local
+sudo ldconfig
+```
+
 
 [GnuPG]: https://gnupg.org
 
@@ -234,3 +277,5 @@ vault_password_file=vault_pass.sh
 [Forwarding gpg-agent to a remote system over SSH]: https://wiki.gnupg.org/AgentForwarding
 
 [encrypt Ansible Vault passphrase using GPG]: https://disjoint.ca/til/2016/12/14/encrypting-the-ansible-vault-passphrase-using-gpg/
+
+[download and compile the latest GnuPG]: https://askubuntu.com/questions/681041/trying-to-compile-gnupg-from-source/681085#681085
