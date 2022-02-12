@@ -1,0 +1,38 @@
+## macos unquarantine a file
+xattr -d -r com.apple.quarantine /path/to/file
+spctl --add --label Approved /path/to/file
+
+####
+#GPG
+####
+gpg --list-secret-keys --keyid-format LONG
+export GPG_TTY=$(tty)
+echo RELOADAGENT | gpg-connect-agent
+
+gpg --edit-key me@example.com
+expire
+save
+
+############
+#Small video
+############
+ffmpeg -i input.mp4 -c:v hevc -c:a libopus -b:a 64k -vf scale="-2:480" output.mp4
+#Faster Video Speed
+ffmpeg -i input.mp4 -filter:v "setpts=0.5*PTS" output.mp4
+#Slower Video Speed
+ffmpeg -i input.mp4 -filter:v "setpts=2*PTS" output.mp4
+#Adjust video and audio
+ffmpeg -i input.mp4 -filter_complex "[0:v]setpts=0.5*PTS[v];[0:a]atempo=2.0[a]" -map "[v]" -map "[a]" output.mp4
+#GIF
+ffmpeg -i some.mov some.gif
+ffmpeg -i some.mov -r 4 some-r4.gif
+ffmpeg -i some.mov -r 4 -vf scale=640:-1 some-r4–640.gif
+
+#lets enc. etc. Automatic SSL
+certbot
+
+#manage java versions
+https://www.jenv.be
+
+#DHCP
+wireshark filter (bootp.option.type == 53)
