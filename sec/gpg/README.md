@@ -182,6 +182,10 @@ Host debian
     StreamLocalBindUnlink yes
     ForwardAgent yes
 ```
+Check your paths:
+```sh
+gpgconf --list-dir agent-socket
+```
 
 On Linux server side make sure to call `gpg` without running a local agent:
 ```
