@@ -233,10 +233,9 @@ sudo apt remove gpg
 sudo apt autoremove
 ```
 You can [download and compile the latest GnuPG]:
-(Do update the version to whatever it might be at the time you're reading this)
 ```sh
 cd ~/Downloads
-version=gnupg-2.2.34
+version=gnupg-2.2.34 # Update to latest
 wget https://gnupg.org/ftp/gcrypt/gnupg/$version.tar.bz2
 wget https://gnupg.org/ftp/gcrypt/gnupg/$version.tar.bz2.sig
 tar xf $version.tar.bz2
