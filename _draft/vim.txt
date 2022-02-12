@@ -1,0 +1,18 @@
+NERDTree
+
+mkdir ~/.vim/pack/bundle/opt
+cd !$
+git clone git@github.com:preservim/nerdtree.git
+vi ~/.vimrc
+--------------
+packadd! nerdtree
+au VimEnter NERD_tree_1 enew | execute 'NERDTree '.argv()[0]
+--------------
+
+:NERDTree
+? help toggle
+C-W <arrow> switch window
+C-W < > - + _ | resize window
+t open in tab
+gt switch tab
+:qa quit all windows and tabs
