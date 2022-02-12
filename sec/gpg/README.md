@@ -101,6 +101,9 @@ gpg --decrypt < secret.txt
 ```sh
 gpgconf --kill gpg-agent
 gpg-connect-agent reloadagent /bye
+
+# Have agent ask your passphrase
+echo ok | gpg -er me@example.com | gpg -d
 ```
 
 * Import & export
