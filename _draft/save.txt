@@ -1,0 +1,18 @@
+echo '================================='
+git status
+echo '__________________________'
+echo 'ADD:'
+git add -A
+echo '================================='
+git status
+echo '__________________________'
+echo 'COMMIT:'
+git commit -mm
+echo '================================='
+git status
+echo '__________________________'
+echo 'PUSH ALL:'
+git remote -v
+git remote | xargs -L1 git push --all
+echo '================================='
+git status
