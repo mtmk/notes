@@ -1,6 +1,1 @@
-cd `dirname $0`      && \
-mkdir -p build       && \
-cd build             && \
-cmake .. > /dev/null && \
-make     > /dev/null && \
-./prj03
+c++ -std=c++11 main.cpp && ./a.out
