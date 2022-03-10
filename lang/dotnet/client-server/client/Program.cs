@@ -4,7 +4,7 @@ using library;
 
 Console.WriteLine("Starting client...");
 
-var client = new Client().Start();
+var client = new Client().Start(1234);
 
 int data1 = 0;
 int data2 = 0;

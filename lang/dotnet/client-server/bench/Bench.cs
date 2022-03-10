@@ -7,18 +7,13 @@ namespace bench;
 public class Bench
 {
     private readonly Client _client;
-    private readonly Server _server;
     private int _data1;
     private int _data2;
     
     public Bench()
     {
-        _server = new Server().Start();
-        Thread.Sleep(3_000);
-        _client = new Client().Start();
-        Thread.Sleep(1_000);
-        _ = _client.Send(0, 0).Result;
-        Thread.Sleep(1_000);
+        var server = new Server().Start();
+        _client = new Client().Start(server.Port);
     }
 
     [Benchmark]

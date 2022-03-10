@@ -16,11 +16,11 @@ public class Client
         _pool = ArrayPool<byte>.Create(FrameSize, 128);
     }
 
-    public Client Start()
+    public Client Start(int port)
     {
         var tcpClient = new TcpClient();
         tcpClient.NoDelay = true;
-        tcpClient.Connect(IPAddress.Loopback, 1234);
+        tcpClient.Connect(IPAddress.Loopback, port);
         _stream = tcpClient.GetStream();
         return this;
     }

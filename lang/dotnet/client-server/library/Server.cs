@@ -16,9 +16,22 @@ public class Server
         _pool = ArrayPool<byte>.Create(FrameSize, 128);
     }
 
-    public Server Start(bool verbose = false)
+    public int Port
     {
-        _tcpListener = new TcpListener(IPAddress.Loopback, 1234);
+        get
+        {
+            while (true)
+            {
+                var port = (_tcpListener?.Server.LocalEndPoint as IPEndPoint)?.Port ?? 0;
+                if (port != 0) return port;
+                Thread.Sleep(100);
+            }
+        }
+    }
+
+    public Server Start(bool verbose = false, int port = 0)
+    {
+        _tcpListener = new TcpListener(IPAddress.Loopback, port);
         _tcpListener.Start();
         _thread = new Thread(_ =>
         {

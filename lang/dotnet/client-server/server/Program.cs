@@ -4,6 +4,6 @@ using library;
 
 Console.WriteLine("Starting server..");
 
-new Server().Start(true);
+new Server().Start(true, 1234);
 
 Console.ReadLine();

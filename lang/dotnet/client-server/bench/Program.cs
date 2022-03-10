@@ -1,4 +1,10 @@
 ﻿using bench;
 using BenchmarkDotNet.Running;
 
-BenchmarkRunner.Run<Bench>();
+var summary = BenchmarkRunner.Run<Bench>();
+
+foreach (var report in summary.Reports)
+{
+    Console.WriteLine($"GcStats.TotalOperations: {report.GcStats.TotalOperations}");
+    Console.WriteLine($"GcStats.GetTotalAllocatedBytes: {report.GcStats.GetTotalAllocatedBytes(true)}");
+}
