@@ -1,0 +1,34 @@
+plugins {
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+}
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain { languageVersion = JavaLanguageVersion.of(17) }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    implementation 'com.google.guava:guava:30.1.1-jre'
+    implementation 'io.aeron:aeron-all:1.38.1'
+    implementation 'org.agrona:agrona:1.15.2'
+    implementation 'org.slf4j:slf4j-api:1.7.36'
+    implementation 'ch.qos.logback:logback-classic:1.2.11'
+}
+
+application {
+    mainClass = 'prj02.App'
+    applicationDefaultJvmArgs = ["--add-opens=java.base/sun.nio.ch=ALL-UNNAMED"]
+}
+
+tasks.jar {
+    manifest.attributes["Main-Class"] = "project_template.App"
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
