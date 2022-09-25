@@ -37,7 +37,7 @@ AllowedIPs = 10.0.0.1/32
 Endpoint = <IP-address-of-Linux-box-above>:51280
 ```
 
-### Note to poor souls behind corporate proxies
+### Note to Windows admins who needs full control
 Extract `wireguard.exe` and place it under e.g. `c:\wg`
 ```
 # Edit c:\wg\wg0.conf as above
