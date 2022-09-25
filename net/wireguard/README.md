@@ -8,6 +8,7 @@ as long as you can access a UDP port of the peers.
 ## Linux
 ```shell
 # apt install wireguard
+# wg genkey
 # vi /etc/wireguard/wg0.conf
 [Interface]
 PrivateKey = bAkb/KF.....
