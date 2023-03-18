@@ -122,6 +122,8 @@ gpg --recv-keys 4AEE18F83AFDEB23
 * [Remove keys from your public keyring]
 ```sh
 gpg --delete-keys 
+gpg --list-secret-keys --keyid-format=long
+gpg --delete-secret-keys 1234ABC....
 ```
 
 * Backup your private key
