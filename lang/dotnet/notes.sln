@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "value-task-source", "value-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "review-channels", "review-channels\review-channels.csproj", "{36727397-050A-4F56-BC06-4C89A29E1AB7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "periodic-timer", "periodic-timer\periodic-timer.csproj", "{E2DCF4F1-697B-47FA-8724-C499A3771EDE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{36727397-050A-4F56-BC06-4C89A29E1AB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36727397-050A-4F56-BC06-4C89A29E1AB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36727397-050A-4F56-BC06-4C89A29E1AB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2DCF4F1-697B-47FA-8724-C499A3771EDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2DCF4F1-697B-47FA-8724-C499A3771EDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2DCF4F1-697B-47FA-8724-C499A3771EDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2DCF4F1-697B-47FA-8724-C499A3771EDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
