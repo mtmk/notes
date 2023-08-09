@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "review-channels", "review-c
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "periodic-timer", "periodic-timer\periodic-timer.csproj", "{E2DCF4F1-697B-47FA-8724-C499A3771EDE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "json-utf8-reader", "json-utf8-reader\json-utf8-reader.csproj", "{B1DFDE4B-D2D4-446D-AB3C-C7D7502BF58F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{E2DCF4F1-697B-47FA-8724-C499A3771EDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2DCF4F1-697B-47FA-8724-C499A3771EDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2DCF4F1-697B-47FA-8724-C499A3771EDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1DFDE4B-D2D4-446D-AB3C-C7D7502BF58F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1DFDE4B-D2D4-446D-AB3C-C7D7502BF58F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1DFDE4B-D2D4-446D-AB3C-C7D7502BF58F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1DFDE4B-D2D4-446D-AB3C-C7D7502BF58F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
