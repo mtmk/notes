@@ -1,6 +1,6 @@
-void ch1();
+namespace tocpp_ch1 { void run(); }
 
 void main()
 {
-	ch1();
+	tocpp_ch1::run();
 }
