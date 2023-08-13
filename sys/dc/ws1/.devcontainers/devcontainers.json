@@ -1,0 +1,6 @@
+{
+  "name": "workspace1",
+  "build": {
+    "dockerfile": "Dockerfile"
+  }
+}
