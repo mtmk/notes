@@ -1,4 +1,5 @@
 #include <iostream>
+#include <variant>
 
 using namespace std;
 
@@ -77,6 +78,50 @@ namespace tocpp_ch2
 
 	enum Color2 { red, green, blue };
 
+
+	enum class Type { ptr, num };
+
+	struct Node { };
+
+	union Value
+	{
+		Node* p;
+		int i;
+	};
+
+	struct Entry1
+	{
+		string name;
+		Type t;
+		Node* p;
+		int i;
+	};
+
+	struct Entry2
+	{
+		string name;
+		Type t;
+		Value v;
+	};
+
+	void f1(Entry1* pe)
+	{
+		if (pe->t == Type::num)
+		{
+			cout << pe->i;
+		}
+	}
+
+	struct Entry2 {
+		string name;
+		variant<string, int> v;
+	};
+
+	void f2(Entry2& e) {
+		if (holds_alternative<int>(e.v))
+			cout << get<int>(e.v);
+	}
+
 	void run()
 	{
 		cout << "A Tour of C++, Chapter 2" << endl;
@@ -104,5 +149,11 @@ namespace tocpp_ch2
 
 		Color2 c2{ red };
 		cout << "color2:red = " << c2 << endl;
+
+		cout << endl;
+
+		cout << "Unions" << endl;
+
+
 	}
 }
