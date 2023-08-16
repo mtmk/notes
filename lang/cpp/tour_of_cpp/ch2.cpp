@@ -112,12 +112,12 @@ namespace tocpp_ch2
 		}
 	}
 
-	struct Entry2 {
+	struct Entry3 {
 		string name;
 		variant<string, int> v;
 	};
 
-	void f2(Entry2& e) {
+	void f2(Entry3& e) {
 		if (holds_alternative<int>(e.v))
 			cout << get<int>(e.v);
 	}
