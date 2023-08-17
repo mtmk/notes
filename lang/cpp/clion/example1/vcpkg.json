@@ -1,0 +1,12 @@
+{
+  "name" : "example1",
+  "version-string" : "1.0.0",
+  "builtin-baseline" : "57fee154cc4068542740b4b5775343d9fd83413e",
+  "dependencies" : [ {
+    "name" : "libzip",
+    "version>=" : "1.9.2#2"
+  }, {
+    "name" : "fmt",
+    "version>=" : "10.0.0"
+  } ]
+}
