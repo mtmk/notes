@@ -8,5 +8,8 @@
   }, {
     "name" : "fmt",
     "version>=" : "10.0.0"
+  }, {
+    "name" : "cnats",
+    "version>=" : "3.6.1"
   } ]
 }
