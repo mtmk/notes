@@ -43,7 +43,7 @@ int main() {
         return 1;
     }
 
-
+    natsConnection_Drain(nc);
     natsConnection_Destroy(nc);
     natsOptions_Destroy(opts);
     nats_Close();
