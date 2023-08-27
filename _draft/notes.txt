@@ -27,6 +27,9 @@ ffmpeg -i input.mp4 -filter_complex "[0:v]setpts=0.5*PTS[v];[0:a]atempo=2.0[a]" 
 ffmpeg -i some.mov some.gif
 ffmpeg -i some.mov -r 4 some-r4.gif
 ffmpeg -i some.mov -r 4 -vf scale=640:-1 some-r4–640.gif
+#crop
+ffplay -i input.mp4 -vf "crop=in_w-790:in_h"
+ffmpeg -i input.mp4 -vf "crop=in_w-790:in_h" output.mp4
 
 #lets enc. etc. Automatic SSL
 certbot
