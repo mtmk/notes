@@ -17,10 +17,16 @@ save
 #Small video
 ############
 ffmpeg -i input.mp4 -c:v hevc -c:a libopus -b:a 64k -vf scale="-2:480" output.mp4
+
 #Faster Video Speed
 ffmpeg -i input.mp4 -filter:v "setpts=0.5*PTS" output.mp4
+
+# Don't include audio to fix timestamps
+ffmpeg -i input.mp4 -filter:v "setpts=0.5*PTS" -an output.mp4
+
 #Slower Video Speed
 ffmpeg -i input.mp4 -filter:v "setpts=2*PTS" output.mp4
+
 #Adjust video and audio
 ffmpeg -i input.mp4 -filter_complex "[0:v]setpts=0.5*PTS[v];[0:a]atempo=2.0[a]" -map "[v]" -map "[a]" output.mp4
 #GIF
