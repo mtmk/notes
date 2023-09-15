@@ -1,0 +1,14 @@
+## docker exe on windows
+
+Download from https://download.docker.com/win/static/stable/x86_64/ unzip and place `docker.exe` in your PATH
+
+## compose
+
+Download from https://github.com/docker/compose/releases and place under `%USERPROFILE%\.docker\cli-plugins\docker-compose.exe`
+
+## over ssh
+
+Set environment variable `DOCKER_HOST` pointing to a machine/VM with docker engine installed:
+```
+$env:DOCKER_HOST="ssh://mydockerhost"
+```
