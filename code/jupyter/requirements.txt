@@ -1,2 +1,6 @@
 jupyterlab
 numpy
+scipy
+statistics
+pandas
+matplotlib
