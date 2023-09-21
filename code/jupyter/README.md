@@ -5,3 +5,9 @@
 (.venv) > pip install -r requirements.txt
 (.venv) > jupyter lab
 ```
+
+...or using pycharm:
+```
+> pycharm .
+```
+(should pick-up .venv)
