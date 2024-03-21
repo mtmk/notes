@@ -1,0 +1,8 @@
+﻿Copied from github.com/dotnet/runtime for self-study, experimentation and educational purposes
+since it's easier to read and navigate the code in any IDE (e.g. Rider) without the heavier
+build environment requirements of dotnet/runtime repo.
+
+Following is the license information for the original files in this folder:
+
+// Licensed to the .NET Foundation under one or more agreements.
+// The .NET Foundation licenses this file to you under the MIT license.
