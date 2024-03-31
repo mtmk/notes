@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "periodic-timer", "periodic-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "json-utf8-reader", "json-utf8-reader\json-utf8-reader.csproj", "{B1DFDE4B-D2D4-446D-AB3C-C7D7502BF58F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "roslyn-stuff", "roslyn-stuff\roslyn-stuff.csproj", "{22C7622E-80D1-48D6-97DA-DC485B98D521}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{B1DFDE4B-D2D4-446D-AB3C-C7D7502BF58F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1DFDE4B-D2D4-446D-AB3C-C7D7502BF58F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1DFDE4B-D2D4-446D-AB3C-C7D7502BF58F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22C7622E-80D1-48D6-97DA-DC485B98D521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22C7622E-80D1-48D6-97DA-DC485B98D521}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22C7622E-80D1-48D6-97DA-DC485B98D521}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22C7622E-80D1-48D6-97DA-DC485B98D521}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
