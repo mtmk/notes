@@ -45,3 +45,11 @@ https://www.jenv.be
 
 #DHCP
 wireshark filter (bootp.option.type == 53)
+
+
+#################
+# OTHER FFMPEG
+
+https://code.videolan.org/videolan/vlc/-/issues/25864
+remux: mov support pcm_mulaw but mp4 doesn't
+ffmpeg -i foo.mp4 -c copy -f mov bar.mp4
